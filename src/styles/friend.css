@@ -2,6 +2,7 @@
     background-color: #131c21;
     color: white;
     padding: 10px;
+    margin-bottom: 2px;
 }
 
 .item-center{
@@ -26,4 +27,10 @@
     margin-top: 0.25rem;
     font-size: .75rem;
     line-height: 1rem;
+}
+
+.scroll{
+    max-height: 48rem;
+    overflow-y: scroll;
+    overflow-x: scroll;
 }

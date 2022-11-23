@@ -1,6 +1,7 @@
 .menu{
     width: 30%;
     height:100vh;
+    max-height: 100vh;
     background-color: #F9F9F9;
     float: left;
 }
