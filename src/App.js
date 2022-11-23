@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header id="user-info">user info goes here</header>
       <section id="sidebar">sidebar with multiple users to chat with</section>
-      <section id="main">main - chat history goes here</section>
+      <section id="chat-history">main - chat history goes here</section>
       <footer id="input-bar">
         <InputBar />
       </footer>
