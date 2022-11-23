@@ -1,9 +1,11 @@
 import './App.css';
 import InputBar from './components/InputBar';
+import LeftMenu from './components/LeftMenu';
 
 function App() {
   return (
     <div className="App">
+        <LeftMenu/>
       <header id="user-info">user info goes here</header>
       <section id="sidebar">sidebar with multiple users to chat with</section>
       <section id="chat-history">main - chat history goes here</section>

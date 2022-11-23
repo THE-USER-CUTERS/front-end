@@ -1,0 +1,25 @@
+.menu{
+    width: 30%;
+    height:100vh;
+    background-color: #F9F9F9;
+    float: left;
+}
+
+.top-menu{
+    justify-content: space-around;
+    background-color: #EDEDED;
+    width: auto;
+    height: 5%;
+    display: flex;
+    padding: 10px;
+}
+
+.icon-menu{
+    font-size: 30px;
+}
+
+.custon-search-input{
+    width: 100%;
+    padding: 17px;
+    border: none;
+}
