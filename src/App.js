@@ -4,10 +4,10 @@ import InputBar from './components/InputBar';
 function App() {
   return (
     <div className="App">
-      <header>user info goes here</header>
-      <section>sidebar with multiple users to chat with</section>
-      <section>main - chat history goes here</section>
-      <footer>
+      <header id="user-info">user info goes here</header>
+      <section id="sidebar">sidebar with multiple users to chat with</section>
+      <section id="main">main - chat history goes here</section>
+      <footer id="input-bar">
         <InputBar />
       </footer>
     </div>
