@@ -14,7 +14,6 @@ export default function TopMenu(){
     const [showFriends, setShowFriends] = useState(friends);
 
     function filter(filterText){
-        console.log(filterText);
         if(filterText !== '' && filterText){
             let provFriends = friends.filter(x => x.name.includes(filterText) || x.text.includes(friends));
             setShowFriends(provFriends);
