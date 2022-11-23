@@ -1,0 +1,29 @@
+.friend{
+    background-color: #131c21;
+    color: white;
+    padding: 10px;
+}
+
+.item-center{
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+.friend-image{
+    width: 16.666667%;
+    margin-right: 10px;
+}
+
+.body{
+    width: 83.333333%;
+}
+
+.time{
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin-top: 0.25rem;
+    font-size: .75rem;
+    line-height: 1rem;
+}
