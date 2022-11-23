@@ -1,6 +1,7 @@
 import './App.css';
 import InputBar from './components/InputBar';
 import LeftMenu from './components/LeftMenu';
+import MessageInput from './components/MessageInput';
 
 function App() {
   return (
