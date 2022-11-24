@@ -21,17 +21,46 @@
 }
 
 #chat-history{
-  padding-left: 10px;
   display: grid;
-  height: 90vw;
 
 }
 
+.icon{
+  font-size: 20px;
+}
+
+#message-input{
+  padding: 10px;
+  border-radius: 12px;
+  background: #fff;
+}
+
 #input-bar {
-  bottom: 0;
+  padding: 20px;
+  background-color: #2a2f32;
   position: absolute;
-  width: 10vw;
-  padding-bottom: 5%;
+  bottom: 0;
+  width: -webkit-fill-available;
+}
+
+
+.send-button{
+    border: none;
+    background: #008a7c;
+    border-radius: 50%;
+    color: #fff;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+  justify-content: space-evenly;
+  display: flex;
+  display: flex;
 }
 
 
