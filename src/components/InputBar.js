@@ -5,7 +5,7 @@ import '../styles/InputBar.css';
       return (
         <section id="inputBar">
             <form>
-                <input id="message-input" placeholder="Aa"></input>
+                <input id="message-input" placeholder="Aa" on></input>
             </form>
         </section>
       )

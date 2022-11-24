@@ -4,6 +4,7 @@ import InputBar from './components/InputBar';
 import LeftMenu from './components/LeftMenu';
 import MessageInput from './components/MessageInput';
 import Modal from './components/Modal';
+import UserInformationBar from './components/UserInformationBar';
 
 function App() {
 
@@ -26,14 +27,14 @@ function App() {
     <div className="App">
 
       <header id="user-info">
-        user info goes here
+        <UserInformationBar username="James Ong" profilePic='./profile-pic-default'/>
       </header>
 
     <main>
         {/* <Modal isModalVisible={isModalVisible} setModalVisible={setModalVisible} setFriends={setFriends} setUser={setUser}/> */}
         <LeftMenu id="sidebar"/>
         <section id="chat-history">
-        main - chat history goes here
+        <MessageInput Author={'Lucas'} text={"Hello how are you"} isAuthor={true}/>
         {messages.length > 0 && messages.map((message) => <MessageInput Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
         <footer id="input-bar">
         <InputBar />
