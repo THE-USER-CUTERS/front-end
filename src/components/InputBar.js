@@ -5,7 +5,13 @@ import '../styles/InputBar.css';
       return (
         <section id="inputBar">
             <form>
-                <input id="message-input" placeholder="Aa"></input>
+              <div className='flex'>
+                  <p className='pointer'>&#128512;</p>
+                  <input id="message-input" placeholder="type your message here..."></input>
+                  <button className='send-button pointer'>
+                    <i class="fa fa-send-o icon"></i>
+                  </button>
+                </div>
             </form>
         </section>
       )
