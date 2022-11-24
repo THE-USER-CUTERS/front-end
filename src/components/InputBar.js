@@ -1,11 +1,11 @@
 
 import '../styles/InputBar.css';
 
-  function InputBar({socket}){
+  function InputBar({socket, name}){
 
     function sendNewMessage(e){
       e.preventDefault();
-      socket.emit('message', e.target[0].value);
+      socket.emit('message', {name: name, message: e.target[0].value});
       e.target.reset();
     }
 

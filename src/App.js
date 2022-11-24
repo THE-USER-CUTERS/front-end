@@ -11,40 +11,43 @@ import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 const socket = io.connect("http://localhost:3001");
 
 function App() {
-
-  const [isModalVisible, setModalVisible] = useState(true);
+  
+  const [user, setUser] = useState('');
+  const [isModalVisible, setModalVisible] = useState(user === '');
   const [friends, setFriends] = useState([]);
   const [messages, setMessages] = useState([]);
-  const [user, setUser] = useState('');
+
 
   useEffect(() => {
 
     socket.on('connect', (data) => {
       console.log(data);
-      // setMessages([...messages, data])
+      // setMessages(data)
     });
     }, [socket, messages]);
 
     socket.on("message", function(msg) {
-      setMessages([...messages, new Message("user", msg)]);
+      setMessages([...messages, new Message(msg.name, msg.message)]);
     });
+
+    useEffect(() => {
+      setModalVisible(user === '');
+    }, [user]);
 
   return (
     <div className="App">
-
       <header id="user-info">
         <UserInformationBar username="James Ong" profilePic='https://picsum.photos/90'/>
       </header>
-
+      <Modal isModalVisible={isModalVisible} setModalVisible={setModalVisible} setFriends={setFriends} setUser={setUser} socket={socket}/>
     <main>
-        {/* <Modal isModalVisible={isModalVisible} setModalVisible={setModalVisible} setFriends={setFriends} setUser={setUser}/> */}
         <LeftMenu id="sidebar"/>
         <section id="chat-history">
           <div className='scroll'>
             {messages.length > 0 && messages.map((message, index) => <MessageInput key={index} Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
           </div>
           <footer id="input-bar">
-            <InputBar socket={socket} />
+            <InputBar name={user} socket={socket} />
           </footer>
       </section>
     </main>

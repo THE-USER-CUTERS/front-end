@@ -12,14 +12,15 @@ export default function Modal({isModalVisible, setModalVisible, setFriends, setU
     }
 
     return(<>
-        {isModalVisible && <form onSubmit={(e) => sendName(e)}>
+        {isModalVisible &&
         <div className='modal'>
+            <form onSubmit={(e) => sendName(e)}>
             <div className='modal-content'>
                 <input className='input-modal' type='text' placeholder="Please enter your name"/>
-                <button className='button-modal' onClick={(e) => sendName(e.target.value)}>Send</button>
+                <button className='button-modal'>Send</button>
             </div>
-        </div>
-        </form>}
+            </form>
+        </div>}
         </>
     )
 }
