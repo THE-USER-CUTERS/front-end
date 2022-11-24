@@ -1,8 +1,13 @@
-import '../styles/modal.css'
+import '../styles/modal.css';
+import socketIO from 'socket.io-client';
 
 export default function Modal({isModalVisible, setModalVisible, setFriends, setUser}){
 
     async function sendName(name){
+        socketIO.on('connection', (socket) => {
+            console.log(`⚡: ${socket.id} user just connected!`);
+
+        });
         setModalVisible(false);
         setUser(name);
         try {
@@ -21,12 +26,13 @@ export default function Modal({isModalVisible, setModalVisible, setFriends, setU
         }
     }
 
-    return(
-        <div className='modal'>
+    return(<>
+        {isModalVisible && <div className='modal'>
             <div className='modal-content'>
                 <input className='input-modal' type='text' placeholder="Please enter your name"/>
                 <button className='button-modal' onClick={(e) => sendName(e.target.value)}>Send</button>
             </div>
-        </div>
+        </div>}
+        </>
     )
 }
