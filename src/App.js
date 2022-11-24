@@ -5,6 +5,7 @@ import LeftMenu from './components/LeftMenu';
 import MessageInput from './components/MessageInput';
 import Modal from './components/Modal';
 import socketIO from 'socket.io-client';
+import UserInformationBar from './components/UserInformationBar';
 const socket = socketIO.connect('http://localhost:4000');
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     <div className="App">
 
       <header id="user-info">
-        user info goes here
+        <UserInformationBar username="James Ong" profilePic='https://picsum.photos/90'/>
       </header>
 
     <main>

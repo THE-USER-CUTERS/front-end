@@ -7,7 +7,7 @@ import '../styles/InputBar.css';
             <form>
               <div className='flex'>
                   <p className='pointer'>&#128512;</p>
-                  <input id="message-input" placeholder="type your message here..."></input>
+                  <input id="message-input" placeholder="type your message here..." on></input>
                   <button className='send-button pointer'>
                     <i class="fa fa-send-o icon"></i>
                   </button>
