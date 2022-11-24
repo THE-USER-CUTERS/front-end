@@ -29,7 +29,9 @@
 
 #input-bar {
   bottom: 0;
+  position: absolute;
   width: 10vw;
+  padding-bottom: 5%;
 }
 
 
