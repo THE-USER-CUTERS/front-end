@@ -8,14 +8,15 @@ import Message from './classes/Message'
 import UserInformationBar from './components/UserInformationBar';
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-const baseUrl = 'http://localhost:3001';
+const baseUrl = 'http://localhost:3000';
+const baseEndPoints = 'http://localhost:3001';
 
 const socket = io.connect(baseUrl);
 
 function App() {
 
   const [user, setUser] = useState('');
-  const [isModalVisible, setModalVisible] = useState(user === '');
+  const [isModalVisible, setModalVisible] = useState(user === '' || !user);
   const [friends, setFriends] = useState([]);
   const [messages, setMessages] = useState([]);
 
@@ -23,8 +24,10 @@ function App() {
   useEffect(() => {
 
     socket.on('connect', async () => {
-      const prevMessages = await fetch(`${baseUrl}/messages`);
+      const prevMessages = await fetch(`${baseEndPoints}/messages`);
+      // const activeUsers = await fetch(`${baseEndPoints}/users`);
       setMessages(prevMessages);
+      //setFriends(activeUsers);
     });
     }, [socket, messages]);
 
@@ -33,7 +36,7 @@ function App() {
     });
 
     useEffect(() => {
-      setModalVisible(user === '');
+      setModalVisible(user === ''|| !user);
     }, [user]);
 
   return (
