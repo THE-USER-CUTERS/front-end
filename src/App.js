@@ -4,6 +4,8 @@ import InputBar from './components/InputBar';
 import LeftMenu from './components/LeftMenu';
 import MessageInput from './components/MessageInput';
 import Modal from './components/Modal';
+import socketIO from 'socket.io-client';
+const socket = socketIO.connect('http://localhost:4000');
 
 function App() {
 
@@ -13,14 +15,8 @@ function App() {
   const [user, setUser] = useState('');
 
   useEffect(() => {
-    fetchData();
-  }, [messages])
-
-  async function fetchData(){
-    const response = await fetch("http://localhost:5001/");
-    const data = await response.json();
-    setMessages(data);
-  }
+    socket.on('messageResponse', (data) => setMessages([...messages, data]));
+    }, [socket, messages]);
 
   return (
     <div className="App">
@@ -33,14 +29,12 @@ function App() {
         {/* <Modal isModalVisible={isModalVisible} setModalVisible={setModalVisible} setFriends={setFriends} setUser={setUser}/> */}
         <LeftMenu id="sidebar"/>
         <section id="chat-history">
-        main - chat history goes here
-        {messages.length > 0 && messages.map((message) => <MessageInput Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
-        <footer id="input-bar">
-        <InputBar />
-        </footer>
-
+          main - chat history goes here
+          {messages.length > 0 && messages.map((message) => <MessageInput Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
+          <footer id="input-bar">
+            <InputBar />
+          </footer>
       </section>
-
     </main>
 
     </div>
