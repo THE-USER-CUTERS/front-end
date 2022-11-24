@@ -1,10 +1,10 @@
 import '../styles/rightMenu.css';
 import TopMenu from './TopMenu';
 
-export default function LeftMenu() {
+export default function LeftMenu({friends}) {
     return(
         <div className="menu">
-            <TopMenu/>
+            <TopMenu friends={friends}/>
             <div></div>
         </div>
     )

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Friend from "./Friend";
 
 const friends = [
@@ -9,7 +9,7 @@ const friends = [
 
 ]
 
-export default function TopMenu(){
+export default function TopMenu({friendsConnected}){
 
     const [showFriends, setShowFriends] = useState(friends);
 
@@ -22,6 +22,10 @@ export default function TopMenu(){
         }
 
     }
+
+    useEffect(() => {
+        // setShowFriends(friendsConnected);
+    }, [friendsConnected])
 
 
     return(
