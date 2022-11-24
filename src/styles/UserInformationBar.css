@@ -1,0 +1,18 @@
+
+#user-info-bar {
+    background: #00bfb6;
+    display: inline-flex;
+    width: 100%
+}
+
+img{
+    height: 5%
+}
+
+#username{
+    bottom: 0;
+    font-size: 1.5rem;
+    color: white;
+    padding-left: 0.5%;
+    padding-top: 1.75%;
+}

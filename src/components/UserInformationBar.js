@@ -1,10 +1,11 @@
+import '../styles/UserInformationBar.css'
 
   function UserInformationBar({profilePic, username}){
 
     return (
       <div id="user-info-bar">
           <img src={profilePic}></img>
-          <div>{username}</div>
+          <div id="username">{username}</div>
       </div>
     )
 }
