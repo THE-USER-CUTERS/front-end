@@ -8,7 +8,7 @@ import Message from './classes/Message'
 import UserInformationBar from './components/UserInformationBar';
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-const baseUrl = 'http://localhost:3001';
+const baseUrl = 'http://localhost:3000';
 
 const socket = io.connect(baseUrl);
 
@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <header id="user-info">
-        <UserInformationBar username="James Ong" profilePic='https://picsum.photos/90'/>
+        <UserInformationBar username={user} profilePic='https://picsum.photos/90'/>
       </header>
       <Modal isModalVisible={isModalVisible} setModalVisible={setModalVisible} setFriends={setFriends} setUser={setUser} socket={socket}/>
     <main>
