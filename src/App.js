@@ -4,9 +4,11 @@ import InputBar from './components/InputBar';
 import LeftMenu from './components/LeftMenu';
 import MessageInput from './components/MessageInput';
 import Modal from './components/Modal';
-import socketIO from 'socket.io-client';
+import Message from './classes/Message'
 import UserInformationBar from './components/UserInformationBar';
-const socket = socketIO.connect('http://localhost:4000');
+import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
+
+const socket = io.connect("http://localhost:3001");
 
 function App() {
 
@@ -16,8 +18,16 @@ function App() {
   const [user, setUser] = useState('');
 
   useEffect(() => {
-    socket.on('messageResponse', (data) => setMessages([...messages, data]));
+
+    socket.on('connect', (data) => {
+      console.log(data);
+      // setMessages([...messages, data])
+    });
     }, [socket, messages]);
+
+    socket.on("message", function(msg) {
+      setMessages([...messages, new Message("user", msg)]);
+    });
 
   return (
     <div className="App">
@@ -31,10 +41,10 @@ function App() {
         <LeftMenu id="sidebar"/>
         <section id="chat-history">
           <div className='scroll'>
-            {messages.length > 0 && messages.map((message) => <MessageInput Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
+            {messages.length > 0 && messages.map((message, index) => <MessageInput key={index} Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
           </div>
           <footer id="input-bar">
-            <InputBar />
+            <InputBar socket={socket} />
           </footer>
       </section>
     </main>
