@@ -1,22 +1,44 @@
 .App {
-  text-align: center;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
+
 .pointer{
     cursor: pointer;
 }
 
 #user-info{
-
+  padding: 3px;
 }
 
 #sidebar {
-
+  padding-right: 10px;
+  width: 80vw;
 }
 
 #chat-history{
+  padding-left: 10px;
+  display: grid;
+  height: 90vw;
 
 }
 
 #input-bar {
+  bottom: 0;
+  width: 10vw;
+}
 
+
+main{
+  display: grid;
+  grid-template-columns: 20% auto;
+  width: 100%
+}
+
+#right{
+  display: grid;
+  grid-template-rows: 1fr auto;
 }

@@ -1,4 +1,6 @@
 
+import '../styles/InputBar.css';
+
   function InputBar(){
       return (
         <section id="inputBar">
