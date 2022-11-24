@@ -8,7 +8,7 @@ import Message from './classes/Message'
 import UserInformationBar from './components/UserInformationBar';
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'http://localhost:3001';
 
 const socket = io.connect(baseUrl);
 
