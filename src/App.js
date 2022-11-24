@@ -30,8 +30,9 @@ function App() {
         {/* <Modal isModalVisible={isModalVisible} setModalVisible={setModalVisible} setFriends={setFriends} setUser={setUser}/> */}
         <LeftMenu id="sidebar"/>
         <section id="chat-history">
-          main - chat history goes here
-          {messages.length > 0 && messages.map((message) => <MessageInput Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
+          <div className='scroll'>
+            {messages.length > 0 && messages.map((message) => <MessageInput Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
+          </div>
           <footer id="input-bar">
             <InputBar />
           </footer>

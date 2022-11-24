@@ -22,7 +22,7 @@
 
 #chat-history{
   display: grid;
-
+  overflow-y: scroll;
 }
 
 .icon{
