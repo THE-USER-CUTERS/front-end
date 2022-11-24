@@ -8,8 +8,7 @@ import Message from './classes/Message'
 import UserInformationBar from './components/UserInformationBar';
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-const baseUrl = 'http://localhost:3000';
-const baseEndPoints = 'http://localhost:3001';
+const baseUrl = 'http://localhost:3001';
 
 const socket = io.connect(baseUrl);
 
@@ -24,10 +23,9 @@ function App() {
   useEffect(() => {
 
     socket.on('connect', async () => {
-      const prevMessages = await fetch(`${baseEndPoints}/messages`);
-      // const activeUsers = await fetch(`${baseEndPoints}/users`);
-      setMessages(prevMessages);
-      //setFriends(activeUsers);
+      const response = await fetch(`${baseUrl}/messages`);
+      const prevMessages = await response.json();
+      setMessages([...messages, ...prevMessages.map(m => new Message(m.user, m.message))]);
     });
     }, [socket, messages]);
 
