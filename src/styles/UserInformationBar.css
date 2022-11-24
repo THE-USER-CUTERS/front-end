@@ -6,7 +6,8 @@
 }
 
 img{
-    height: 5%
+    height: 5%;
+    padding-right: 3px;
 }
 
 #username{
