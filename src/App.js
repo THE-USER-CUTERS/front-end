@@ -19,13 +19,18 @@ function App() {
   const [friends, setFriends] = useState([]);
   const [messages, setMessages] = useState([]);
 
+  const scrollDown = () => {
+    const chatConversation = document.getElementById("scroll");
+    chatConversation.scrollTo(0,chatConversation.scrollHeight);
+  };
+
 
   useEffect(() => {
-
     socket.on('connect', async () => {
       const response = await fetch(`${baseUrl}/messages`);
       const prevMessages = await response.json();
       setMessages([...messages, ...prevMessages.map(m => new Message(m.user, m.message))]);
+      scrollDown();
     });
     }, [socket, messages]);
 
@@ -37,6 +42,10 @@ function App() {
       setModalVisible(user === ''|| !user);
     }, [user]);
 
+    useEffect(() => {
+      scrollDown();
+    }, [messages]);
+
   return (
     <div className="App">
       <header id="user-info">
@@ -46,9 +55,9 @@ function App() {
     <main>
         <LeftMenu id="sidebar"/>
         <section id="chat-history">
-          <div className='scroll'>
+          <div id='scroll' className='scroll'>
             {messages.length > 0 && messages.map((message, index) => <MessageInput key={index} Author={message.name} text={message.text} isAuthor={user === message.name}/>)}
-          </div>
+          </div >
           <footer id="input-bar">
             <InputBar name={user} socket={socket} />
           </footer>
