@@ -10,7 +10,7 @@ import { io } from "socket.io-client";
 
 
 
-const baseUrl = 'http://localhost:3001';
+const baseUrl = 'http://localhost:80';
 
 const socket = io.connect(baseUrl);
 
@@ -40,6 +40,11 @@ function App() {
       setMessages([...messages, new Message(msg.name, msg.message)]);
     });
 
+    socket.on("username", function(msg) {
+      console.log(msg);
+      setFriends(msg);
+    });
+
     useEffect(() => {
       setModalVisible(user === ''|| !user);
     }, [user]);
@@ -53,9 +58,9 @@ function App() {
       <header id="user-info">
         <UserInformationBar username={user} profilePic='https://picsum.photos/90'/>
       </header>
-      <Modal isModalVisible={isModalVisible} setModalVisible={setModalVisible} setFriends={setFriends} setUser={setUser} socket={socket}/>
+      <Modal isModalVisible={isModalVisible} setUser={setUser} socket={socket}/>
     <main>
-        <LeftMenu id="sidebar"/>
+        <LeftMenu id="sidebar" friends={friends}/>
         <section id="chat-history">
           <div id='scroll' className='scroll'>
             {messages.length > 0 && messages.map((message, index) => <MessageInput key={index} Author={message.name} text={message.text} isAuthor={user === message.name}/>)}

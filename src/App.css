@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.center{
+  text-align: center;
+}
+
 #user-info{
   padding: 3px;
   display: inline;
