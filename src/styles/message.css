@@ -1,12 +1,11 @@
 .message{
     height: fit-content;
-    min-width: 400px;
-    max-width: 700px;
+    width: 350px;
     margin: 40px auto;
     border-radius: 50px;
     background: #00bfb6;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-weight: 800;
     font-family: arial;
