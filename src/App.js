@@ -41,7 +41,10 @@ function App() {
     });
 
     socket.on("activeUsers", function(msg) {
-      console.log(msg);
+      setFriends(msg);
+    });
+
+    socket.on("disconnectedMsg", function(msg) {
       setFriends(msg);
     });
 
