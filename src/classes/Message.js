@@ -1,4 +1,4 @@
-class Message {
+export default class Message {
     constructor(name, text){
         this._name = name;
         this._text = text;
@@ -22,4 +22,4 @@ class Message {
 
 }
 
-module.exports = Message;
+// module.exports = Message;
