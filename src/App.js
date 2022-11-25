@@ -40,7 +40,7 @@ function App() {
       setMessages([...messages, new Message(msg.name, msg.message)]);
     });
 
-    socket.on("username", function(msg) {
+    socket.on("activeUsers", function(msg) {
       console.log(msg);
       setFriends(msg);
     });

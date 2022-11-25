@@ -6,7 +6,7 @@ export default function Friend({name, text, time}){
     const [textPreview, setTextPreview] = useState(text);
 
     useEffect(() => {
-        checkTextLenght();
+        //checkTextLenght();
     }, [text]);
 
     function checkTextLenght(){
