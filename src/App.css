@@ -11,7 +11,6 @@
 }
 
 
-
 .center{
   text-align: center;
 }
@@ -33,14 +32,6 @@
   padding: 10px;
   border-radius: 12px;
   background: #fff;
-}
-
-#input-bar {
-  padding: 20px;
-  background-color: #2a2f32;
-  position: absolute;
-  bottom: 0;
-  width: -webkit-fill-available;
 }
 
 
@@ -76,14 +67,35 @@ main{
   grid-template-rows: 1fr auto;
 }
 
-#chat-history{
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: 1fr auto;
+#scroll{
+  display: block;
+  background: #efe7dd url(https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg) repeat;
 }
 
 .scroll{
   height: 100%;
-  max-height: 50rem;
+  margin: 0%;
+  max-height: 60rem;
   overflow-y: scroll;
+
 }
+
+#input-bar{
+        padding: 20px;
+        background-color: #2a2f32;
+        /* position: absolute; */
+        width: -webkit-fill-available;
+        overflow: hidden;
+        align-self: flex-end;
+  }
+
+footer{
+    position: sticky;
+    bottom: 0;
+  }
+
+  #chat-history{
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: flex-start;
+  }
