@@ -10,7 +10,7 @@ import { io } from "socket.io-client";
 
 
 
-const baseUrl = 'http://localhost:80';
+const baseUrl = 'https://user-cuters-backend.onrender.com';
 
 const socket = io.connect(baseUrl);
 
