@@ -6,7 +6,7 @@
   <p align="center">
     The best chat to talk with your friends
     <br />
-    <a href="" target="_blank">Visit Us</a>
+    <a href="https://the-user-cuters.github.io/front-end/" target="_blank">Visit Us</a>
     .
     <a href="https://github.com/THE-USER-CUTERS/front-end/issues">Report Bug</a>
     ·
@@ -55,6 +55,8 @@ This was created by the THE USER CUTERS, Copyright © 2022 THE USER CUTERS.
 Enter your name to chat with your friends in real life. You can share emojis too!
 Filter very easy the user active.
 See previous conversations and don't miss anything!
+
+<a href="https://the-user-cuters.github.io/front-end/" target="_blank">Play with it here!</a>
 
 ## 👩‍👩‍👧‍👧 Contributors
 
