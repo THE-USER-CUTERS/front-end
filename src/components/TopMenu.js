@@ -30,7 +30,11 @@ export default function TopMenu({friends}){
             </div>
             <input type="search" onChange={(e) => filter(e.target.value)} className="custon-search-input" placeholder="Search messages..."/>
                 <div className="scroll">
-                    {showFriends.length > 0 && showFriends.map((friend, index) =><Friend key={index} name={friend} time={friend.time} text={friend.text}/>)}
+                    {showFriends.length > 0 && showFriends.map((friend, index) =>{
+                        let date = new Date();
+                        let time = `${date.getHours()} : ${date.getMinutes()}`;
+                        return(<Friend key={index} name={friend} time={time} text={friend.text}/>)
+                    })}
                     {showFriends.length == 0 && <p className="center">Sorry! No users connected!</p>}
                 </div>
             </div>
