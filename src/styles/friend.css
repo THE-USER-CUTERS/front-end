@@ -31,6 +31,7 @@
 }
 
 .scroll{
+    height: 80%;
     max-height: 48rem;
     overflow-y: scroll;
 }
