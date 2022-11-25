@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://github.com/THE-USER-CUTERS/front-end.git"></a>
 
-  <h1 align="center">ChatBox<img style="width: 50px" src="logosAndIcons/popcorn.png"></h1>
+  <h1 align="center">ChatBox<img style="width: 50px" src="./public/Chatbox-PR.png"></h1>
 
   <p align="center">
     The best chat to talk with your friends
