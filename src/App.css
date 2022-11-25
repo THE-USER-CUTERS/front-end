@@ -7,7 +7,7 @@
 }
 
 .pointer{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .center{
@@ -22,11 +22,6 @@
 #sidebar {
   padding-right: 10px;
   width: 80vw;
-}
-
-#chat-history{
-  display: grid;
-  overflow-y: scroll;
 }
 
 .icon{
@@ -77,4 +72,16 @@ main{
 #right{
   display: grid;
   grid-template-rows: 1fr auto;
+}
+
+#chat-history{
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.scroll{
+  height: 100%;
+  max-height: 70rem;
+  overflow-y: scroll;
 }
