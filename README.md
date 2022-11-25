@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://github.com/THE-USER-CUTERS/front-end.git"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1 align="center">ChatBox<img style="width: 50px" src="logosAndIcons/popcorn.png"></h1>
 
-## Available Scripts
+  <p align="center">
+    The best chat to talk with your friends
+    <br />
+    <a href="" target="_blank">Visit Us</a>
+    .
+    <a href="https://github.com/THE-USER-CUTERS/front-end/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/THE-USER-CUTERS/front-end/issues">Request Feature</a>
+  </p>
+</p>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block"> 📋 Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Technology used</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">Usage</a></li>
+    <li><a href="#license">Contributors</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm start`
+<!-- ABOUT THE PROJECT -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✏️ About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This was created by the THE USER CUTERS, Copyright © 2022 THE USER CUTERS.
 
-### `npm test`
+## 💻&nbsp; Technologies used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-### `npm run build`
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?&style=for-the-badge&logo=Socket.io&logoColor=white)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💻 Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Enter your name to chat with your friends in real life. You can share emojis too!
+Filter very easy the user active.
+See previous conversations and don't miss anything!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 👩‍👩‍👧‍👧 Contributors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contributors that made this possible:
 
-## Learn More
+1. Georgia Haddock.
+2. Rafay Tahir.
+3. Niks Ronis.
+4. Minh Anh Pham.
+5. Vivek Kampurath
+6. Irene Martin
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 👩‍👩‍👧‍👧 Demo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](https://github.com/Friendly-chainsaw/find-flix/blob/dev/logosAndIcons/demo.gif)
 
-### Code Splitting
+<!-- LICENSE -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ®️ License
 
-### Analyzing the Bundle Size
+Copyright © 2022 THE USER CUTERS.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- CONTACT -->
 
-### Making a Progressive Web App
+## 📥 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have issues, please don't hesitate to contact us in Workplace.
