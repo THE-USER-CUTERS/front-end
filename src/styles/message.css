@@ -1,43 +1,19 @@
 .message{
     height: fit-content;
-    width: 300px;
-    margin: 50px auto;
-    border-radius: 15px;
+    min-width: 400px;
+    max-width: 700px;
+    margin: 40px auto;
+    border-radius: 50px;
     background: #00bfb6;
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-weight: 900;
+    font-weight: 800;
     font-family: arial;
-    position: relative;
+    margin-right: 10%
 }
 
 .left{
     background-color: #056162;
+    margin-left: 10%;
 }
-
-.left:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 15px solid #056162;
-    border-right: 15px solid transparent;
-    border-top: 15px solid #056162;
-    border-bottom: 15px solid transparent;
-    right: -16px;
-    top: 0px;
-  }
-
-  .right:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 15px solid transparent;
-    border-right: 15px solid #00bfb6;
-    border-top: 15px solid #00bfb6;
-    border-bottom: 15px solid transparent;
-    left: -16px;
-    top: 0px;
-  }
